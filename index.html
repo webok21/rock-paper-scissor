@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <section id="rounds-box">
+        <p>HOW MANY ROUNDS?</p>
+        <div id="radio-btn">
+            <p>First choose rounds and then click "GO" to start the game</p>
+            <form action="">
+                <input type="radio" name="rounds" id="round5" checked required>
+                <label for="">5</label>
+                <input type="radio" name="rounds" id="round10">
+                <label for="">10</label>
+                <input type="radio" name="rounds" id="round15">
+                <label for="">15</label>
+                <input type="radio" name="rounds" id="round20">
+                <label for="">20</label>
+            </form>
+            <button onclick="roundSelect()">GO</button>
+        </div>
+        <div id="rounds-counter">
+            <span id="current-round"></span>/<span id="total-round"></span>
+        </div>
+    </section>
+
+    <section id="points-box">
+        <p id="user-player" class="player">USER</p>
+        <span id="user-points">0</span>:<span id="comp-points">0</span>
+        <p id="comp-player" class="player">COMP</p>
+    </section>
+
+    <section id="select-box">
+        <div id="select-text">
+            <p>Let's play</p>
+        </div>
+        <div id="select-item">
+            <div id="select-rock" class="remove-color">
+                <img src="assets/img/icons8-hand_-felsen-50.png" alt="">
+            </div>
+            <div id="select-paper" class="remove-color">
+                <img src="assets/img/icons8-ganze-hand-80.png" alt="">
+            </div>
+            <div id="select-scissor" class="remove-color">
+                <img src="assets/img/icons8-hand_-schere-50.png" alt="">
+            </div>
+        </div>
+        <p id="move-text">MAKE YOUR MOVE.</p>
+    </section>
+
+    <footer>
+        <a href="" onclick="restartGame()">restart</a>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee+Shade&family=Space+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Space Mono', monospace;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+p {
+    font-size: 0.8em;
+}
+div {
+    margin: 20px 0;
+}
+header {
+    background: #C7FF33;
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+}
+header h1 {
+    font-family: 'Bungee Shade', cursive;
+    color: teal;
+    line-height: 10vh;
+}
+#rounds-box {
+    width: 30%;
+    height: 30vh;
+    border: 4px solid teal;
+    border-radius: 5px;
+    margin: 25px 0;
+}
+#radio-btn > p {
+    color: #FF6133;
+}
+form {
+    margin: 8px 0;
+}
+input[type='radio']:checked:after {
+    background-color: #FF6133;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    content: '';
+    display: inline-block;
+}
+button {
+    font-family: 'Space Mono', monospace;
+    padding: 10px 50px;
+    background: teal;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: padding 0.7s;
+    animation: move 4s linear infinite;
+}
+button:hover {
+    opacity: 0.4;
+    padding: 7px 16px;
+}
+@keyframes move { 
+    0%, 100%{ 
+        transform: translate(-30%); 
+    } 
+    50% {
+        transform: translateX(30%); 
+    } 
+} 
+#rounds-counter {
+    display: none;
+}
+#points-box {
+    position: relative;
+    width: 30%;
+    height: 10vh;
+    border: 4px solid teal;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+span {
+    font-size: 2.2em;
+}
+#points-box span {
+    animation: glow 3s linear infinite;
+}
+@keyframes glow  {
+    20%,100%
+    {
+    color: yellow;
+    text-shadow: none;
+    }
+    20%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #C7FF33,
+        0 0 30px #C7FF33,
+        0 0 70px #C7FF33,
+        0 0 120px #C7FF33,
+        0 0 180px #C7FF33
+    }
+}
+.player {
+    display: inline-block;
+    background: #FF6133;
+    border-radius: 5px;
+    padding: 8px 13px;
+}
+#user-player {
+    position: absolute;
+    top: 8px;
+    left: -30px;
+}
+#comp-player {
+    position: absolute;
+    top: 8px;
+    right: -30px;
+}
+#select-item div {
+    display: inline-block;
+    padding: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+img {
+    height: 7vh;
+}
+#restart {
+    color: orange;
+}
+a {
+    color: #000;
+    background: #C7FF33;
+}
+#move-text {
+    margin-bottom: 20px;
+}
+
+.remove-color {
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+.lose-color {
+    border: 4px double #FF6133;
+    border-radius: 50%;
+}
+.draw-color {
+    border: 4px outset #C7FF33;
+    border-radius: 50%;
+}
+.win-color {
+    border: 4px dotted teal; 
+    border-radius: 50%;
+}
