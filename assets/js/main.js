@@ -12,7 +12,7 @@ const rock = document.getElementById('select-rock')
 const paper = document.getElementById('select-paper')
 const scissor = document.getElementById('select-scissor')
 
-let round = 1
+let round = 0
 let maxRound
 let user = 0
 let comp = 0
